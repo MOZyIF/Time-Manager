@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>music/bird.wav</file>
+        <file>music/canon.wav</file>
+        <file>music/mengzhongde.wav</file>
+        <file>music/qianyuqianxun.wav</file>
+        <file>music/rain.wav</file>
+        <file>music/xiliu.wav</file>
+    </qresource>
+</RCC>

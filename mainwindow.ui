@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>471</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#qt_calendar_calendarview {
+    background-color: rgb(175, 197, 255);
+    font:16px ;
+	font: 9pt &quot;Ink Free&quot;;
+}
+
+#qt_calendar_monthbutton {
+    background-color:rgb(18, 64, 171);
+    font-color:rgb(0,134,139);
+	font: 14pt &quot;仿宋&quot;;
+}
+#qt_calendar_yearbutton {
+    background-color: rgb(18, 64, 171);
+	font-color:rgb(0,0,0);
+	font: 14pt &quot;Ink Free&quot;;
+}
+#qt_calendar_yearedit {
+    background-color: rgb(255, 245, 215);
+	font: 14pt &quot;仿宋&quot;;
+}
+
+#qt_calendar_navigationbar {
+    background-color: rgb(18, 64, 171);
+font-color:rgb(0,0,0);
+}
+
+
+
+QCalendarWidget QSpinBox::up-arrow { width:56px;  height:56px; }
+  QCalendarWidget QSpinBox::down-arrow { width:56px;  height:56px; }
+</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>50</y>
+      <width>291</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListView {
+	font: 25 9pt &quot;Microsoft YaHei&quot;;
+	border: 6px solid rgb(161, 182, 235); /* 设置边框的大小，样式，颜色 */
+	border-radius:10px;
+	background-color:rgba(255, 253, 237,50%);
+}
+
+QListView::item:hover {
+	background-color: transparent;
+	padding: 10px;
+	border-left: 3px solid rgb(130, 130, 130);
+}
+QListView::item:selected {
+	background-color: transparent;
+	color: black;
+	padding: 10px;
+	border-left: 3px solid black;
+}                                                     
+
+                                                            </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_insert">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>191</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:rgb(54, 89, 170);
+border-radius:5px
+}
+                                                             
+QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>添加事件</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_save">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>10</y>
+      <width>191</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:rgb(54, 89, 170);
+border-radius:5px
+}
+                                                             
+QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>保存日志</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>10</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:white;
+background:rgba(54, 89, 170,50%);
+border-radius:5px;
+font: 18pt &quot;Ink Free&quot;;
+}
+                                                             
+/*QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_begin">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>91</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:rgb(54, 89, 170) ;
+border-radius:5px
+}
+    
+QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>计时</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stop">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>480</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:rgb(54, 89, 170);
+border-radius:5px
+}
+                                                             
+QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>暂停计时</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_set0">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>480</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:rgb(54, 89, 170);
+border-radius:5px
+}
+                                                             
+QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>计时结束</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_set0_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>480</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:rgb(54, 89, 170);
+border-radius:5px
+}
+                                                             
+QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>更换背景音乐</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>676</x>
+      <y>480</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+font-color:rgb(255,255,255);
+background:rgb(54, 89, 170)
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>雪山</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>火车</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>窗外</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>草原</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>选择自己的图片</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>480</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Adobe Devanagari&quot;;</string>
+    </property>
+    <property name="text">
+     <string>改变背景图片：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_showall">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>430</y>
+      <width>91</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:white;
+background:rgb(54, 89, 170) ;
+border-radius:5px
+}
+    
+QPushButton::hover{background:rgb(110,115,100);}
+                                                            
+QPushButton::pressed{background:#eb7350;}</string>
+    </property>
+    <property name="text">
+     <string>全部事件</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
